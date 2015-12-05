@@ -1,0 +1,217 @@
+
+body {
+    color: black;
+    font: 14px/20px "Arial";
+    background-color:#e6e6e6;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+h1{
+  text-align: center;
+  max-width: 100%;
+  height:auto;
+  width: auto;
+  padding:100;
+}
+a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover{
+  color: #FFF;
+  text-decoration: underline;
+}
+header{
+  background: #0066cc;
+  width:100%;
+  height: 86px;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+  opacity:0.90;
+}
+#logo{
+  margin:20px;
+  float:left;
+  background: url("http://img.auctionhouse.uk.net/files/bedsandbucks/jointauctioneers/home%20estate%20agents.jpg") no-repeat center;
+  width:200px;
+  height:60px;
+}
+
+
+nav{
+  float: right;
+  padding: 35px 20px 20px 0;
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: url("menu-icon.png") center;
+}
+a: hover #menu-icon{
+  border-radius: 4px 4px 0 0;
+}
+ul{
+  list-style: none;
+}
+nav ul li{
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+.current{
+  color: #FFF;
+  text-decoration: underline;
+}
+#doc{
+  margin: 40px 0;
+}
+#content{
+  margin: 0 auto;
+  max-width: 1140px;
+  margin-top: 110px;
+}
+.blueberry{
+  max-width: 2160px;
+  margin-top:110px;
+}
+section{
+    width:29%;
+    float: left;
+    margin:2%;
+    text-align:center;
+}
+.clear{
+    clear:both;
+}
+
+.info{
+    background-color: #cccccc;
+    opacity:0.90;
+    width:100%;
+    height: 250px;
+}
+article{
+    float:left;
+    margin:0 auto;
+    width:50%;
+    height:auto;
+    padding:4%;
+}
+.hi{
+    float:left;
+    margin:0 auto;
+    width:50%;
+    height:auto;
+    padding:4%;
+}
+article img{
+    width:100%;
+}
+aside{
+    float:right;
+    margin:0 auto;
+    width:35%;
+    height:auto;
+    padding:3%;
+}
+aside ul li{
+    padding-left:3%;
+}
+.begin{
+    margin-top:110px;
+}
+/*footer*/
+footer{
+    background: #333333;
+    width:100;
+    overflow:hidden;
+    opacity:0.90;
+}
+footer p, footer h3, footer ul{
+    color:#FFF;
+}
+footer p a{
+    color:#FFF;
+    text-decoration: none;
+}
+
+.laatste{
+    border-top:1px solid #4D4E50;
+    background-color:#333333;
+    max-height:50px;
+    text-align:center;
+    opacity: 0.95;
+}
+ul.media li{
+  display: inline;
+}
+ul.social li img {
+  height: 50px;
+}
+/*Tabel en Eigen Mening*/
+.MyTable{
+    background-color:#e5cdca;
+    border-collapse: collapse;
+}
+.MyTable td{
+    padding:8px;
+    border:#999 1px solid;
+}
+.MyTable tr:nth-child(even){
+     background:#A4D1FF;
+}
+.MyTable tr:nth-child(uneven){
+    background: #EAF4FF;
+}
+td a{
+  color: black;
+  text-decoration: none;
+}
+.tussen{
+  margin-top:50px;
+}
+.Mening{
+  background:#cccccc;
+  width:100%;
+  height: 350px;
+}
+/* MOBIEL EDITIE OF VERKLEINEN VIA BREEDTE*/
+@media screen and (max-width: 478px) {
+  body{
+    position: absolute;
+    }
+}
+@media screen and (max-width: 890px) {
+    header{
+      postion:absolute;
+    }
+    #menu-icon {
+      display:inline-block;
+    }
+    nav ul, nav:active ul{
+      display: none;
+      position: absolute;
+      padding: 20px;
+      background: #0066cc;
+      border: 1px solid #FFF;
+      right:60px;
+      top: 60px;
+      width:50%;
+      border-radius: 2px 0 2px 2px;
+    }
+    nav li {
+      text-align: center;
+      width: 100%;
+      padding:10px 0;
+      margin: 0;
+    }
+    nav:hover ul{
+      display:block;
+    }
+}

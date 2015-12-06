@@ -1,0 +1,149 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+    div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; margin-bottom: 20px}
+    </style>
+    <script>
+    var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+    var questions = [
+        [ "Wie is een van de oprichter van Microsoft", "Steve Jobs", "Bill Gates", "Mark Zuckerberg", "B" ],
+      [ "Wie is rijker?", "Cristiano Ronaldo", "Mark Zuckerberg", "Bill Gates", "C" ],
+      [ "Mark Zuckerberg is meer dan 100 maal zo rijk dan Ronaldo Messi zijn inkomen bij elkaar", "Juist", "Onjuist", "Het is andersom", "A" ],
+      [ "Instinker denk goed na!!!", "A", "B", "C", "C" ]/*Goed Gezien!!! Het antwoord is C*/
+    ];
+    function _(x){
+      return document.getElementById(x);
+    }
+    function renderQuestion(){
+      test = _("test");
+      if(pos >= questions.length){
+        test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+        _("test_status").innerHTML = "Test Completed";
+        pos = 0;
+        correct = 0;
+        return false;
+      }
+      _("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+      question = questions[pos][0];
+      chA = questions[pos][1];
+      chB = questions[pos][2];
+      chC = questions[pos][3];
+      test.innerHTML = "<h3>"+question+"</h3>";
+      test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+      test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+      test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+      test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+    }
+    function checkAnswer(){
+      choices = document.getElementsByName("choices");
+      for(var i=0; i<choices.length; i++){
+        if(choices[i].checked){
+          choice = choices[i].value;
+        }
+      }
+      if(choice == questions[pos][4]){
+        correct++;
+      }
+      pos++;
+      renderQuestion();
+    }
+    window.addEventListener("load", renderQuestion, false);
+    </script>
+    </head>
+    <body>
+
+
+
+      <header>
+          <a href="index.html" id="logo"></a>
+          <nav>
+              <a href="#" id="menu-icon"></a>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="WatIsInformatica.html">Wat is informatica</a></li>
+              <li><a href="studies.html">Studies</a></li>
+              <li><a href="bestaangeschreven.html">Best Aangeschreven Studies</a></li>
+
+              <li class="current">Over Ons</li>
+            </ul>
+          </nav>
+        </header>
+
+    <div class="begin"></div>
+    <center>
+      <h1>
+        Wie Zijn wij en waarom moet je voor ons kiezen?
+      </h1>
+    </center>
+    <div class="info">
+    <section>
+      <img src="id.png">
+        <p>
+          Wij zijn de keuzegids, het bedrijf dat studies en universiteiten rangschikt. Ook helpen wij mensen met een keuze maken voor een studie.
+        </p>
+    </section>
+    <section>
+      <img src="goedkoop.png">
+        <p>
+          Wij zijn gratis, wat concurrenten van ons niet zijn. Als je nog meer vragen hebt voor het
+        </p>
+    </section>
+    <section>
+      <img src="comments.png">
+        <p>
+          Wij zijn makkelijk bereikbaar. Met social media en via telefoon zijn wij bereikbaar.
+        </p>
+    </section>
+    <div class="clear"></div>
+    <center>
+    <h2>
+      Natuurlijk willen wij zien of jullie door onze test komen
+    </h2>
+    <p>
+      Bij deze veel succes, want je zult het nodig hebben....
+    </p>
+
+      <h2 id="test_status"></h2>
+      <div id="test"></div>
+    </center>
+    <footer>
+        <section>
+            <h3><b>De Informatica Gids</b></h3>
+            <b><p>073 644 2929</p></b>
+            <p>Geraert Borchstraat 1</p>
+            <p>5212 CZ 's-Hertogenbosch</p>
+        </section>
+        <section>
+            <h3>Via Social Media</h3>
+            <ul class="media">
+                <li><a target="_blank" title="follow us on facebook" href="https://www.facebook.com/pages/Vladimir-Poetin/143742069028904?fref=ts&rf=105493126151975"><img alt="follow us on facebook" src="facebook.png"></a></li>
+                <li><a target="_blank" title="find us on google" href="https://plus.google.com/+Justin-biebersmusicBlogspotIn"><img alt="follow us on google" src="googleplus.png"></a></li>
+                <li><a target="_blank" title="follow us on twitter" href="https://twitter.com/JohnCena"><img alt="follow us on twitter" src="twitter.png"></a></li>
+                <li><a target="_blank" title="follow us on youtube" href="https://www.youtube.com/user/Fifalosophy"><img alt="follow us on youtube" src="youtube.png"></a></li>
+
+            </ul>
+        </section>
+        <section>
+            <h3>
+                Mede Mogelijk gemaakt door de universiteiten:
+            </h3>
+                <ul class="witi">
+
+                        <li>Technische Universiteit van Eindhoven</li>
+                        <li>Technische Universiteit van Twente </li>
+                        <li>Universiteit van Amsterdam</li>
+                        <li>Universiteit van Groningen</li>
+
+
+                </ul>
+        </section>
+    </footer>
+    <footer class="laatste">
+        <p>©Copyright-De Informatica Gids</p>
+    </footer>
+    </body>
+    </html>

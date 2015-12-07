@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 h1{
-  text-align: center;
+  text-align: center;border: solid
   max-width: 100%;
   height:auto;
   width: auto;
@@ -40,7 +40,10 @@ header{
   width:200px;
   height:60px;
 }
-
+.AAA a{
+  color:black;
+  text-decoration: underline;
+}
 
 nav{
   float: right;
@@ -94,7 +97,7 @@ section{
     background-color: #cccccc;
     opacity:0.90;
     width:100%;
-    height: 250px;
+    height: 300px;
 }
 article{
     float:left;
@@ -126,6 +129,20 @@ aside ul li{
 .begin{
     margin-top:110px;
 }
+.Tech{
+  width:44%;
+  float: left;
+  margin:2%;
+  text-align:center;
+}
+
+.informatica{
+  width:44%;
+  float: left;
+  margin:2%;
+  text-align:center;
+}
+
 /*footer*/
 footer{
     background: #333333;
